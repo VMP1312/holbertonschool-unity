@@ -12,7 +12,6 @@ public class CameraController : MonoBehaviour
         offset = transform.position - player.transform.position;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if(PlayerPrefs.GetInt("isInverted") == 1)
@@ -28,7 +27,7 @@ public class CameraController : MonoBehaviour
         }
         else
         {
-            if(PlayerPrefs.GetInt("isInverted") == 0)
+            if(Input.GetMouseButton(1))
             {
                 offset = Quaternion.AngleAxis(Input.GetAxis("Mouse X") * mouseMove, Vector3.up) * Quaternion.AngleAxis((Input.GetAxis("Mouse Y") * -1) * mouseMove, Vector3.left) * offset;
                 transform.position = player.transform.position + offset; 
