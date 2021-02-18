@@ -14,7 +14,7 @@ public class CameraController : MonoBehaviour
 
     void Update()
     {
-        if(PlayerPrefs.GetInt("isInverted") == 1)
+        if(PlayerPrefs.GetInt("isInverted") != 1)
         {
             if(Input.GetMouseButton(1))
             {
