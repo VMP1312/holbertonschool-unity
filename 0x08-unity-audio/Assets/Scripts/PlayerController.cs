@@ -61,10 +61,8 @@ public class PlayerController : MonoBehaviour
         
         if (player.transform.position.y < -30)
             transform.position = new Vector3(0, 50, 0);
-        
 
-        
-        if (Input.GetKey("w") || Input.GetKey("a") || Input.GetKey("s") || Input.GetKey("d"))
+        if (Input.GetKey("w") || Input.GetKey("a") || Input.GetKey("s") || Input.GetKey("d") || Input.GetKey("up") || Input.GetKey("down") || Input.GetKey("left") || Input.GetKey("right"))
             anim.SetBool("Run",true);
 
         if (player.transform.position.y < -30)
